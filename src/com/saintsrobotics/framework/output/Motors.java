@@ -6,7 +6,7 @@ import java.util.Map;
 public abstract class Motors {
 
 
-  private Map<String, Motor> motorList = new HashMap<>();
+  protected Map<String, Motor> motorList = new HashMap<>();
 
   public void init() {
     motorList.values().forEach(Motor::init);
@@ -20,4 +20,7 @@ public abstract class Motors {
     motorList.values().forEach(Motor::update);
   }
 
+  public void getMotorList() {
+    return this.motorList;
+  }
 }
